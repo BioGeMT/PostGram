@@ -1,0 +1,35 @@
+project_name = "PostGram"
+species = "homo_sapiens"
+release = "draft-aim1-aim2"
+tasks = ["p_body_vs_non_p_body", "stress_granule_vs_non_stress"]
+output_dir = "outputs"
+
+[[sources]]
+name = "ensembl_transcripts"
+kind = "reference"
+path = "data/raw/ensembl/transcripts.fa"
+description = "Transcript annotations and 3'UTR-aware sequences"
+
+[[sources]]
+name = "localization_labels"
+kind = "localization"
+path = "data/raw/localization/labels.tsv"
+description = "Transcript or gene-level localization labels for P-bodies and stress granules"
+
+[[sources]]
+name = "encode_eclip"
+kind = "binding"
+path = "data/raw/encode/eclip.tsv"
+description = "RBP binding events from eCLIP"
+
+[[sources]]
+name = "tarbase"
+kind = "interaction"
+path = "data/raw/tarbase/interactions.tsv"
+description = "Experimentally supported miRNA-target interactions"
+
+[[sources]]
+name = "utr_motifs"
+kind = "annotation"
+path = "data/raw/motifs/utr_annotations.tsv"
+description = "Motif-centric regulatory annotations mapped onto transcript UTRs"
